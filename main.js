@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 emptyState.classList.remove('hidden');
             } else {
                 linksContainer.innerHTML = `
-                    <div class="col-span-1 md:col-span-2 lg:col-span-3 flex flex-col items-center justify-center py-16">
+                    <div  class="col-span-1 md:col-span-2 lg:col-span-3 flex flex-col items-center justify-center py-16">
                         <div class="w-16 h-16 flex items-center justify-center text-primary mb-4">
                             <i class="ri-search-line ri-2x"></i>
                         </div>
@@ -151,8 +151,9 @@ document.addEventListener('DOMContentLoaded', function() {
         filteredLinks.forEach(link => {
             const linkCard = document.createElement('div');
             linkCard.className = 'cyber-card rounded-lg p-4 flex flex-col';
+           
             linkCard.innerHTML = `
-                <div class="flex items-start justify-between mb-3">
+                <div  class="flex items-start justify-between mb-3">
                     <div class="flex items-center">
                         <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-lg mr-3">
                             <i class="${link.icon || 'ri-link-m'} ri-lg text-primary"></i>
@@ -226,15 +227,16 @@ document.addEventListener('DOMContentLoaded', function() {
             categoriesContainer.appendChild(categoryTab);
         });
         
-        // Add "Add Category" button
+        // Add "Add Category" button <span >Thêm danh mục</span>
         const addCategoryButton = document.createElement('button');
         addCategoryButton.id = 'add-category-btn';
         addCategoryButton.className = 'cyber-button !rounded-button whitespace-nowrap px-3 py-2 rounded-full text-sm font-medium border border-primary/50 bg-white flex items-center';
+        
         addCategoryButton.innerHTML = `
-            <div class="w-4 h-4 flex items-center justify-center mr-1">
+            <div  class="w-4 h-4 flex items-center justify-center mr-1">
                 <i class="ri-add-line"></i>
             </div>
-            <span>Thêm danh mục</span>
+            
         `;
         addCategoryButton.addEventListener('click', showCategoryModal);
         categoriesContainer.appendChild(addCategoryButton);

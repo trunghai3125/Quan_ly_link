@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Links - Quản lý liên kết</title>
+    <title>Cyber Links</title>
+    <link rel="icon" sizes="32x32" href="images/avarta.png" type="image/png">
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +16,12 @@
     <script>tailwind.config={theme:{extend:{colors:{primary:'#6FE6FC',secondary:'#ffffff'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 </head>
 <body class="min-h-screen">
-    <!-- Header -->
-    <header class="w-full bg-gradient-to-r from-primary/90 to-white sticky top-0 z-50 shadow-md">
+    <!-- Header bg-gradient-to-r-->
+    <header style="background-color: aqua;" class="w-full  from-primary/90 to-white sticky top-0 z-50 shadow-md">
         <div class="container mx-auto px-4 py-3 flex items-center justify-between">
             <div class="flex items-center">
                 <h1 class="text-2xl md:text-3xl font-bold text-gray-800 font-cyber">
-                    <span class="text-primary">Cyber</span>Links
+                    <span style="color: black;" class="text-primary">Cyber</span>Links
                 </h1>
             </div>
             
@@ -33,12 +34,12 @@
                 <input type="text" id="search-desktop" class="search-input w-full pl-10 pr-4 py-2 rounded-full border border-primary/30 focus:outline-none focus:border-primary transition-all bg-white/80 backdrop-blur-sm" placeholder="Tìm kiếm liên kết...">
             </div>
             
-            <div class="flex items-center space-x-3">
-                <button id="add-link-btn" class="cyber-button !rounded-button bg-primary text-white px-4 py-2 font-medium flex items-center">
+            <div  class="flex items-center space-x-3">
+                <button style="background-color: black;" id="add-link-btn" class="cyber-button !rounded-button bg-primary text-white px-4 py-2 font-medium flex items-center">
                     <div class="w-5 h-5 flex items-center justify-center mr-1">
                         <i class="ri-add-line"></i>
                     </div>
-                    <span class="hidden md:inline-block">Thêm Link</span>
+                    <!-- <span class="hidden md:inline-block">Thêm Link</span> -->
                 </button>
             </div>
         </div>
@@ -51,7 +52,7 @@
                         <i class="ri-search-line"></i>
                     </div>
                 </div>
-                <input type="text" id="search-mobile" class="search-input w-full pl-10 pr-4 py-2 rounded-full border border-primary/30 focus:outline-none focus:border-primary transition-all bg-white/80 backdrop-blur-sm" placeholder="Tìm kiếm liên kết...">
+                <input  type="text" id="search-mobile" class="search-input w-full pl-10 pr-4 py-2 rounded-full border border-primary/30 focus:outline-none focus:border-primary transition-all bg-white/80 backdrop-blur-sm" placeholder="Tìm kiếm liên kết...">
             </div>
         </div>
     </header>

@@ -1,0 +1,133 @@
+s:where([class^="ri-"])::before { content: "\f3c2"; }
+        
+:root {
+    --primary-color: #6FE6FC;
+    --primary-glow: 0 0 10px rgba(111, 230, 252, 0.7);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(111, 230, 252, 0.05) 0%, transparent 200px),
+        radial-gradient(circle at 80% 70%, rgba(111, 230, 252, 0.05) 0%, transparent 200px);
+}
+
+.font-cyber {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.cyber-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(111, 230, 252, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cyber-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(111, 230, 252, 0.5);
+    border-color: var(--primary-color);
+}
+
+.cyber-glow {
+    box-shadow: var(--primary-glow);
+}
+
+.cyber-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cyber-button:hover {
+    box-shadow: var(--primary-glow);
+}
+
+.cyber-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(111, 230, 252, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.cyber-button:hover:before {
+    left: 100%;
+}
+
+.category-tab {
+    transition: all 0.3s ease;
+}
+
+.category-tab:hover:not(.active) {
+    background-color: rgba(111, 230, 252, 0.1);
+}
+
+.category-tab.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: var(--primary-glow);
+}
+
+.search-input:focus {
+    box-shadow: var(--primary-glow);
+}
+
+/* Custom switch */
+.toggle-checkbox:checked {
+    right: 0;
+    background-color: var(--primary-color);
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: rgba(111, 230, 252, 0.3);
+}
+
+/* Hide number input arrows */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(111, 230, 252, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(111, 230, 252, 0.8);
+    }
+}
+
+.pulse-animation {
+    animation: pulse-glow 2s infinite;
+}
+
+/* Modal animation */
+.modal-enter {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.modal-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.modal-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-exit-active {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 300ms, transform 300ms;
+}
